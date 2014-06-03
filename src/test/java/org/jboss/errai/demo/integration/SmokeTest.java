@@ -116,6 +116,7 @@ public class SmokeTest {
 
       try {
         test.test(element);
+        break;
       }
       catch (AssertionError e) {
         Thread.sleep(1000);
