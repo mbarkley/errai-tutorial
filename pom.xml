@@ -92,7 +92,7 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
-    <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+    <outputDirectory>${project.build.directory}/webapp.war/WEB-INF/classes</outputDirectory>
 
     <pluginManagement>
       <plugins>
@@ -166,7 +166,8 @@
           <disableCastChecking>true</disableCastChecking>
           <runTarget>${errai.dev.context}/index.html</runTarget>
           <soyc>false</soyc>
-          <hostedWebapp>src/main/webapp</hostedWebapp>
+          <hostedWebapp>${project.build.directory}/webapp.war</hostedWebapp>
+          <copyWebapp>true</copyWebapp>
           <strict>true</strict>
         </configuration>
       </plugin>
@@ -178,9 +179,6 @@
             <fileset>
               <directory>${basedir}</directory>
               <includes>
-                <include>src/main/webapp/app/</include>
-                <include>src/main/webapp/WEB-INF/deploy/</include>
-                <include>src/main/webapp/WEB-INF/lib/</include>
                 <include>**/gwt-unitCache/**</include>
                 <include>.errai/</include>
               </includes>
