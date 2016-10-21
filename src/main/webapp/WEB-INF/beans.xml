@@ -7,8 +7,10 @@
     <exclude name = "org.jboss.errai.demo.client.local.BindableEmailAnchor" />
     <exclude name = "org.jboss.errai.demo.client.local.ContactEditor" />
     <exclude name = "org.jboss.errai.demo.client.local.AppSetup" />
+    <exclude name = "org.jboss.errai.demo.client.local.PaperTextArea" />
     <exclude name = "org.jboss.errai.demo.client.local.DateConverter" />
     <exclude name = "org.jboss.errai.demo.client.local.NavBar" />
+    <exclude name = "org.jboss.errai.demo.client.local.PaperInput" />
     <exclude name = "org.jboss.errai.demo.client.local.BindableTelAnchor" />
     <exclude name = "org.jboss.errai.demo.client.local.ContactDisplay" />
     <exclude name = "org.jboss.errai.demo.client.local.BaseContactView" />
