@@ -11,7 +11,7 @@
   <name>Errai::Tutorial</name>
 
   <properties>
-    <errai.version>4.0.0.Beta7</errai.version>
+    <errai.version>4.0.0-SNAPSHOT</errai.version>
     <gwt.version>2.8.0</gwt.version>
     <slf4j.version>1.5.11</slf4j.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -175,7 +175,7 @@
             to avoid class loading problems for classes that are not needed on the server. 
             To configure an alternative package filter for client-only classes, specify: 
             -Derrai.client.local.class.pattern=.*/myproject/client/.* -->
-          <extraJvmArgs>-Xmx2048m -XX:CompileThreshold=7000 -Derrai.jboss.home=${errai.jboss.home} -Derrai.dev.context=${errai.dev.context}</extraJvmArgs>
+          <extraJvmArgs>-Xmx2048m -XX:CompileThreshold=7000 -Derrai.jboss.home=${errai.jboss.home} -Derrai.dev.context=${errai.dev.context} -Derrai.bus.enable_csrf_token=true -Derrai.bus.enable_sse_support=true</extraJvmArgs>
           <server>org.jboss.errai.cdi.server.gwt.EmbeddedWildFlyLauncher</server>
           <disableCastChecking>true</disableCastChecking>
           <runTarget>${errai.dev.context}/</runTarget>

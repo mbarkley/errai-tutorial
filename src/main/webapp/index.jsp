@@ -27,6 +27,7 @@
   <link href="<%=contextPath%>/css/application.css" rel="stylesheet">
   <script type="text/javascript">
     erraiJaxRsApplicationRoot = "rest";
+    erraiBusRemoteCommunicationEnabled = true;
   </script>
   <script src="<%=contextPath%>/bower_components/platform/platform.js"></script>
   <script src="<%=contextPath%>/bower_components/webcomponentsjs/webcomponents.js"></script>
