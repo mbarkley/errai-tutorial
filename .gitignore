@@ -44,3 +44,4 @@ class_list.txt
 .factorypath
 .bowerrc
 bower.json
+/.apt_generated/
