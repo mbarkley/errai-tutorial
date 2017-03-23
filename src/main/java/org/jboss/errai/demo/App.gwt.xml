@@ -11,7 +11,8 @@
    <inherits name="org.jboss.errai.ui.nav.Navigation" />
    <inherits name="org.jboss.errai.databinding.DataBinding" />
    <inherits name="org.jboss.errai.enterprise.CDI" />
-   <inherits name="org.jboss.errai.enterprise.Jaxrs" />
+   <inherits name="org.jboss.errai.enterprise.JaxrsNoGenerator" />
+   <inherits name="org.jboss.errai.enterprise.JaxrsAnnotationProcessor" />
    <inherits name="org.jboss.errai.jpa.JPA" />
    <inherits name="org.jboss.errai.jpa.sync.DataSync" />
 
