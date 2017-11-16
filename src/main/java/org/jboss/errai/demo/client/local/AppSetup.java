@@ -16,17 +16,20 @@
 
 package org.jboss.errai.demo.client.local;
 
-import com.google.gwt.user.client.ui.RootPanel;
-
-import elemental2.dom.HTMLDocument;
-
-import org.jboss.errai.demo.client.local.JQueryProducer.JQuery;
-import org.jboss.errai.ioc.client.api.EntryPoint;
-import org.jboss.errai.ui.nav.client.local.NavigationPanel;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+
+import org.jboss.errai.common.client.dom.elemental2.Elemental2DomUtil;
+import org.jboss.errai.demo.client.local.JQueryProducer.JQuery;
+import org.jboss.errai.ioc.client.api.EntryPoint;
+import org.jboss.errai.ui.nav.client.local.NavigationPanel;
+import org.slf4j.Logger;
+
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.RootPanel;
+
+import elemental2.dom.HTMLDocument;
 
 /**
  * <p>
@@ -52,10 +55,21 @@ public class AppSetup {
   @Inject
   private HTMLDocument document;
 
+  @Inject
+  private Elemental2DomUtil domUtil;
+
+  @Inject
+  private Logger logger;
+
   @PostConstruct
   public void init() {
     RootPanel.get("rootPanel").add(navPanel);
     $.wrap($.wrap(document.body).children().first()).before(navbar.getElement());
+    try {
+      domUtil.appendWidgetToElement(document.body, new Button("Testing"));
+    } catch (final Throwable t) {
+      logger.error("Something went terribly wrong.", t);
+    }
   }
 
 }
